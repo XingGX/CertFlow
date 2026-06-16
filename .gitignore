@@ -1,0 +1,142 @@
+# Xcode
+## Build generated
+build/
+DerivedData/
+build-*/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Other
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+Pods/
+*.xcworkspace/xcuserdata/
+
+# Carthage
+Carthage/Build/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Mac OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Editors
+.vscode/
+.idea/
+
+# AI Coding Assistants
+## Cursor
+.cursor/
+.cursorignore
+.cursorindexingignore
+
+## OpenCode (sst/opencode-ai)
+.opencode/
+opencode.json
+opencode.jsonc
+.opencode/agent/
+.opencode/command/
+.opencode/skill/
+.opencode/plugin/
+.opencode/remote-config.json
+_plugins/
+
+## Claude (Anthropic) / Claude Code
+.claude/
+CLAUDE.md
+.claude.json
+
+## Gemini (Google)
+.gemini/
+GEMINI.md
+
+## Codex (OpenAI)
+.codex/
+AGENTS.md
+
+## GitHub Copilot
+.copilot/
+
+## Cody (Sourcegraph)
+.cody/
+
+## Tabnine
+.tabnine/
+
+## Windsurf / Codeium
+.codeium/
+.windsurf/
+
+## Continue.dev
+.continue/
+
+## Aider
+.aider*
+.aider.conf.yml
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v3/
+
+## Zed
+.zed/
+
+## Trae IDE
+.trae/
+
+## Kiro IDE
+.kiro/
+
+## Augment Code
+.augment/
+
+## Amazon Q
+.amazonq/
+.q/
+
+## Roo Code / Cline
+.roo/
+.cline/
+
+## JetBrains AI (handled by .idea above)
+# .idea/
+
+## Generic AI artifacts
+*.ai-suggestions.json
+.ai-cache/
+.mcp-config*
