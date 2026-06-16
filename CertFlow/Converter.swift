@@ -265,7 +265,7 @@ class Converter {
             // 判定分析
             if output.lowercased().contains("verify return code: 0") || output.contains("return code: 0") || output.contains("handshake") == false {
                 return "🟢 联网验证：APNs 通道握手成功！证书完全可用"
-            } else if output.lowercasesContains("handshake failure") {
+            } else if output.lowercasedContains("handshake failure") {
                 return "🔴 联网验证：苹果服务器拒绝握手 (环境不匹配或证书已被吊销)"
             } else {
                 return "⚠️ 联网验证：\(output.trimmingCharacters(in: .whitespacesAndNewlines).prefix(40))..."
@@ -277,7 +277,7 @@ class Converter {
 }
 
 extension String {
-    func lowercasesContains(_ string: String) -> Bool {
+    func lowercasedContains(_ string: String) -> Bool {
         return self.lowercased().contains(string.lowercased())
     }
 }
