@@ -70,7 +70,16 @@ class Converter {
         
         let data = outputPipe.fileHandleForReading.readDataToEndOfFile()
         let versionStr = String(data: data, encoding: .utf8) ?? ""
-        return versionStr.contains("OpenSSL 3.")
+        return needsLegacyProvider(versionOutput: versionStr)
+    }
+    
+    // OpenSSL 3.x 起旧算法(如 RC2-40-CBC)移入 legacy provider，主版本 >= 3 必须加 -legacy。
+    // LibreSSL / OpenSSL 1.1 不支持该参数，返回 false。
+    static func needsLegacyProvider(versionOutput: String) -> Bool {
+        guard let range = versionOutput.range(of: "OpenSSL ") else { return false }
+        let majorDigits = versionOutput[range.upperBound...].prefix { $0.isNumber }
+        guard let major = Int(majorDigits) else { return false }
+        return major >= 3
     }
     
     // MARK: - 核心转换与验证方法
